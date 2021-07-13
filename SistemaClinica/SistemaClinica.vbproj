@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C8DD9BE-30C8-435C-87D1-19D4B750CEDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaClinica.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaClinica</RootNamespace>
+    <AssemblyName>SistemaClinica</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Soft\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SistemaClinica.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SistemaClinica.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ico animal.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7BB80FCCA39FFA8395728A00C4BE55C1D4F864CF</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SistemaClinica_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexao.vb" />
+    <Compile Include="ConsultaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsultaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EspeciesDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EspeciesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAnimais.Designer.vb">
+      <DependentUpon>frmAnimais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAnimais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBuscarCliente.Designer.vb">
+      <DependentUpon>frmBuscarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBuscarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBuscarFornecedor.Designer.vb">
+      <DependentUpon>frmBuscarFornecedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBuscarFornecedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCategoria.Designer.vb">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCliente.Designer.vb">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaMarcacao.Designer.vb">
+      <DependentUpon>frmConsultaMarcacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaMarcacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaVet.Designer.vb">
+      <DependentUpon>frmConsultaVet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsultaVet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmContasPagar.Designer.vb">
+      <DependentUpon>frmContasPagar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmContasPagar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFornecedor.Designer.vb">
+      <DependentUpon>frmFornecedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFornecedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFuncionarios.Designer.vb">
+      <DependentUpon>frmFuncionarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFuncionarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmHorario.Designer.vb">
+      <DependentUpon>frmHorario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmHorario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmListaConsulta.Designer.vb">
+      <DependentUpon>frmListaConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmListaConsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmQuadroHorario.Designer.vb">
+      <DependentUpon>frmQuadroHorario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmQuadroHorario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTrocaSenha.Designer.vb">
+      <DependentUpon>frmTrocaSenha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTrocaSenha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\frmRelConsulta.Designer.vb">
+      <DependentUpon>frmRelConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\frmRelConsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Relatorio\frmRelAnimais.Designer.vb">
+      <DependentUpon>frmRelAnimais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\frmRelAnimais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\frmRelAnimaisEspecies.Designer.vb">
+      <DependentUpon>frmRelAnimaisEspecies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\frmRelAnimaisEspecies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\frmRelConsultaData.Designer.vb">
+      <DependentUpon>frmRelConsultaData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\frmRelConsultaData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\frmRelEspecies.Designer.vb">
+      <DependentUpon>frmRelEspecies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\frmRelEspecies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio\frmRelReceita.Designer.vb">
+      <DependentUpon>frmRelReceita.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorio\frmRelReceita.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sistema_clinicaDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistema_clinicaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistema_clinicaDataSet.vb">
+      <DependentUpon>sistema_clinicaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ValidaCPF\valida_CNPJ_CPF.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\frmAnimais.resx">
+      <DependentUpon>frmAnimais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBuscarCliente.resx">
+      <DependentUpon>frmBuscarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBuscarFornecedor.resx">
+      <DependentUpon>frmBuscarFornecedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCategoria.resx">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCliente.resx">
+      <DependentUpon>frmCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultaMarcacao.resx">
+      <DependentUpon>frmConsultaMarcacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsultaVet.resx">
+      <DependentUpon>frmConsultaVet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmContasPagar.resx">
+      <DependentUpon>frmContasPagar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFuncionarios.resx">
+      <DependentUpon>frmFuncionarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmHorario.resx">
+      <DependentUpon>frmHorario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmListaConsulta.resx">
+      <DependentUpon>frmListaConsulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmQuadroHorario.resx">
+      <DependentUpon>frmQuadroHorario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmTrocaSenha.resx">
+      <DependentUpon>frmTrocaSenha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\frmRelAnimais.resx">
+      <DependentUpon>frmRelAnimais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\frmRelAnimaisEspecies.resx">
+      <DependentUpon>frmRelAnimaisEspecies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\frmRelConsulta.resx">
+      <DependentUpon>frmRelConsulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\frmRelConsultaData.resx">
+      <DependentUpon>frmRelConsultaData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\frmRelEspecies.resx">
+      <DependentUpon>frmRelEspecies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\frmRelReceita.resx">
+      <DependentUpon>frmRelReceita.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RelAnimais.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelAnimaisEspecies.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelConsulta.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelConsultaData.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelEspecies.rdlc" />
+    <EmbeddedResource Include="Relatorio\RelReceita.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConsultaDataSet.xsc">
+      <DependentUpon>ConsultaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ConsultaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConsultaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ConsultaDataSet.xss">
+      <DependentUpon>ConsultaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EspeciesDataSet.xsc">
+      <DependentUpon>EspeciesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EspeciesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EspeciesDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EspeciesDataSet.xss">
+      <DependentUpon>EspeciesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="SistemaClinica_TemporaryKey.pfx" />
+    <None Include="sistema_clinicaDataSet.xsc">
+      <DependentUpon>sistema_clinicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sistema_clinicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistema_clinicaDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistema_clinicaDataSet.xss">
+      <DependentUpon>sistema_clinicaDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\bt_editar menor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir menor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_editar inativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_editar menor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir inativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir menor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_novo inativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_salvar inativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_salvar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_novo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo sistema png - tela maior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo sistema png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo sistema.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mico.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peludinho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rel_receita.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rel_veterinario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relatório.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sem-foto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ted.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animais1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atendimento.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_editar inativo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_editar menor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_editar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir inativo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir menor2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_excluir2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_novo inativo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_salvar inativo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_salvar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_novo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo sistema png - tela maior1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo sistema png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo sistema1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico animal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_dog-01_2140043.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mico1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peludinho1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rel_receita1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rel_veterinario1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relatório1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rex1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sem-foto1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ted1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionario.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vet.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receita.png" />
+    <None Include="Resources\ico_horarios.png" />
+    <None Include="Resources\ico fornecedor.ico" />
+    <None Include="Resources\financeiro icone.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
